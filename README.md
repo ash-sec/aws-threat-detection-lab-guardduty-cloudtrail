@@ -18,3 +18,18 @@
 - [Conclusion](#conclusion)
 
 ---
+
+## Overview
+This project demonstrates the implementation of a **cloud threat detection and alerting system** in AWS. It simulates suspicious API activity using IAM credentials and detects it using **AWS GuardDuty**, while logging all actions through **CloudTrail**. Alerts are automatically delivered via **SNS** using **EventBridge**, replicating a real-world cloud security monitoring pipeline.
+
+---
+
+## Objectives
+- Enable AWS CloudTrail for activity logging  
+- Configure GuardDuty for threat detection  
+- Simulate suspicious API activity using IAM credentials  
+- Detect threats through GuardDuty findings  
+- Implement real-time alerting using SNS and EventBridge  
+- Demonstrate incident response and remediation practices  
+
+---
