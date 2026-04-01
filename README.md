@@ -33,3 +33,30 @@ This project demonstrates the implementation of a **cloud threat detection and a
 - Demonstrate incident response and remediation practices  
 
 ---
+
+## Architecture
+The following services were used:
+
+- **CloudTrail** → Logs all API activity  
+- **GuardDuty** → Detects suspicious behavior  
+- **IAM** → Simulates attacker credentials  
+- **CloudShell (CLI)** → Generates API activity  
+- **EventBridge** → Routes detection events  
+- **SNS** → Sends real-time alerts  
+
+---
+
+## CloudTrail Logging
+AWS CloudTrail was configured to log all management events across the account.
+
+![CloudTrail Enabled](screenshots/cloudtrail-enabled.png)
+
+---
+
+## GuardDuty Threat Detection
+GuardDuty was enabled to monitor CloudTrail logs and identify suspicious activity.
+
+![GuardDuty Enabled](screenshots/guardduty-enabled.png)
+
+---
+
