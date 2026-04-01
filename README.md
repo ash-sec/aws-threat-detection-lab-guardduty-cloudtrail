@@ -49,21 +49,21 @@ The following services were used:
 ## CloudTrail Logging
 AWS CloudTrail was configured to log all management events across the account.
 
-![CloudTrail Enabled](screenshots/cloudtrail-enabled.png)
+![CloudTrail Enabled](AWS%20P3%20SS/cloudtrail-enabled.png)
 
 ---
 
 ## GuardDuty Threat Detection
 GuardDuty was enabled to monitor CloudTrail logs and identify suspicious activity.
 
-![GuardDuty Enabled](screenshots/guardduty-enabled.png)
+![GuardDuty Enabled](AWS%20P3%20SS/guardduty-enabled.png)
 
 ---
 
 ## IAM Attack Simulation
 A test IAM user (`attacker-user`) was created to simulate a compromised account.
 
-![IAM User Created](screenshots/iam-attacker-user-created.png)
+![IAM User Created](AWS%20P3%20SS/iam-attacker-user-created.png)
 
 ---
 
@@ -72,7 +72,7 @@ An access key was generated to simulate API-based access.
 
 Sensitive credentials have been redacted for security purposes.
 
-![Access Key Created](screenshots/access-key-created.png)
+![Access Key Created](AWS%20P3%20SS/access-key-created.png)
 
 ---
 
@@ -85,43 +85,43 @@ aws s3 ls
 aws ec2 describe-instances
 ```
 
-![Suspicious API Activity](screenshots/suspicious-api-activity.png)
+![Suspicious API Activity](AWS%20P3%20SS/suspicious-api-activity.png)
 
 Additional API calls were executed to increase detection likelihood:
 
-![Multiple API Calls](screenshots/multiple-api-calls.png)
+![Multiple API Calls](AWS%20P3%20SS/multiple-api-calls.png)
 
 ---
 
 ## GuardDuty Findings
 GuardDuty successfully detected suspicious activity and generated findings.
 
-![GuardDuty Findings](screenshots/guardduty-findings.png)
+![GuardDuty Findings](AWS%20P3%20SS/guardduty-findings.png)
 
 ---
 
 ## SNS Alerting Setup
 An SNS topic was created to send real-time alerts.
 
-![SNS Topic Created](screenshots/sns-topic-created.png)
+![SNS Topic Created](AWS%20P3%20SS/sns-topic-created.png)
 
 Email subscription was configured and confirmed:
 
-![SNS Email Confirmed](screenshots/sns-email-confirmed.png)
+![SNS Email Confirmed](AWS%20P3%20SS/sns-email-confirmed.png)
 
 ---
 
 ## EventBridge Integration
 An EventBridge rule was created to route GuardDuty findings to SNS.
 
-![EventBridge Rule](screenshots/eventbridge-rule-created.png)
+![EventBridge Rule](AWS%20P3%20SS/eventbridge-rule-created.png)
 
 ---
 
 ## Alert Validation
 Upon generating new findings, an alert was successfully received via email.
 
-![SNS Alert Received](screenshots/sns-alert-received.png)
+![SNS Alert Received](AWS%20P3%20SS/sns-alert-received.png)
 
 ---
 
